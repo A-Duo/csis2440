@@ -1,0 +1,1 @@
+<h1 class="glow-text" style="color:#d23;--glow-color:#c66">Access Denied</h1>

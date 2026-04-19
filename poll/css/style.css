@@ -1,0 +1,117 @@
+body {
+    background-image: url("../img/bg.jpg");
+    background-size: 120px;
+
+    --text-color-primary: #444;
+    color:var(--text-color-primary);
+
+    filter: contrast(5) saturate(0.3);
+}
+
+h1 {
+    color: var(--text-color-primary);
+}
+
+/*Yes I stole this from the spies styling, in my defense it was convienent lol.*/
+.main-container {
+    width: 55%;
+    min-height: 10ch;
+    --side-margin: calc(22.5% - 4ch);
+    margin-left: var(--side-margin);
+    margin-right: var(--side-margin);
+    margin-top: calc(5% + 2ch);
+
+    padding: 4ch;
+
+    border: 2px solid #fff8;
+    border-radius: 1ch;
+
+    /* background-color: #aaaa */
+    background-image: linear-gradient(90deg, #fffe, #ddde, #fffe);
+    box-shadow: 0px 4px 5px #333a;
+}
+
+.unveil {
+    --delay: 600ms;
+    --duration: 1300ms;
+    animation: show var(--duration) var(--delay) cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transform-origin: top center;
+}
+
+.spin {
+    --delay: 600ms;
+    --duration: 1300ms;
+    animation: show var(--duration) var(--delay) cubic-bezier(0.15, 0.32, 0.55, 1.35) forwards;
+    opacity: 0;
+    transform: rotate(-90deg) scale(0);
+    transform-origin: center;
+    width:fit-content;
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.typing {
+    width: 6.2ch;
+}
+
+.pizza-text > * {
+    --delay: 1.8s;
+    --duration: 2.5s;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 0.1ch;
+    animation: typing var(--duration) var(--delay) steps(6  , end);
+    width: 6.3ch;
+    margin: -0.6ch 0;
+    padding: none;
+
+    color: #a71;
+    text-shadow: 0px 1px 3px #667;
+}
+
+label {
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+@keyframes typing {
+  from { width: 0ch }
+  to { width: 6.15ch }
+}
+
+fieldset {
+    border-color: #555a;
+}
+
+.button {
+    border: 1.5px solid black;
+    padding: 0.2ch 0.8ch;
+}
+
+.bar {
+    background-color:#3c3;
+    height:1.8ch;
+    margin-left: 2ch;
+    margin-bottom: -0.3ch;
+    display:inline-block;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    white-space:nowrap;
+}
+
+table td:last-child {
+    width: 100%;
+}
